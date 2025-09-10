@@ -10,7 +10,7 @@
       color: #333;
       line-height: 1.6;
       padding: 20px;
-      padding-bottom: 80px;
+     padding-bottom: 80px; 
     }
     .email-container {
       max-width: 650px;
@@ -32,6 +32,14 @@
       margin-top: 25px;
       font-weight: bold;
     }
+    @media (max-width: 600px) {
+  #footer {
+    position: relative;
+  }
+  body {
+    padding-bottom: 20px; /* reset padding when footer is not fixed */
+  }
+}
     a {
       color: #3498db;
       text-decoration: none;
@@ -100,6 +108,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
