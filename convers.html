@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Greeting Conversation with Emojis</title>
+  <style>
+    body{
+      font-family: Inter, Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+      /* background image with overlay */
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), 
+        url("Fantasy Waterfall In Lush Jungle.jpeg");
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+
+    h1{
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 10px;
+      color: tomato;
+      background-color:mediumspringgreen;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    .chat{
+      max-width: 650px;
+      margin: 120px auto 40px; /* space below fixed header */
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 20px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .bubble{
+      padding: 14px 18px;
+      border-radius: 20px;
+      max-width: 80%;
+      font-size: 18px;
+      line-height: 1.4;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+      cursor: pointer;
+    }
+
+    .bubble:hover{
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      background: #e6ffe6;
+    }
+
+    .left{
+      align-self: flex-start;
+      background: #ffffff;
+      border: 1px solid #f0f0f0;
+    }
+
+    .right{
+      align-self: flex-end;
+      background: #fffde7;
+      border: 1px solid #f5f5f5;
+    }
+
+    .emoji{
+      font-size: 34px;
+      margin-right: 8px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px){
+      .bubble{
+        font-size: 16px;
+        max-width: 100%;
+      }
+      h1{
+        font-size: 20px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Greeting Conversation <br>Nagaa Wal Gaafachuu 👦👧</h1>
+
+  <div class="chat">
+    <div class="bubble left"><span class="emoji">👦</span>Hello! How are you?<br>hello, akkam</div>
+    <div class="bubble right"><span class="emoji">👧</span>Hi! I’m fine, thank you. And you?<br>akkam! Ani nagaadha, galatoomi, ati hoo?</div>
+    <div class="bubble left"><span class="emoji">👦</span>I’m good too. What’s your name?<br>Anis akkasuma nagaadha. maqaan kee eenyu?</div>
+    <div class="bubble right"><span class="emoji">👧</span>My name is Anna. What’s your name?<br>Maqaan koo Anna jedhama. maqaan kee eenyu?</div>
+    <div class="bubble left"><span class="emoji">👦</span>I’m John. Nice to meet you!<br>Ani John jedhama. si argachuu kootti nan gammada.</div>
+    <div class="bubble right"><span class="emoji">👧</span>Nice to meet you too!<br>Anis si argachuu kootti nan gammada.</div>
+   
+    <div class="bubble left"><span class="emoji">👦</span>How old are you?<br>Umriin kee meeqa?</div>
+    <div class="bubble right"><span class="emoji">👧</span>I’m 20 years old. What about you?<br>Ani umriin koo 20 dha. kee hoo?</div>
+    <div class="bubble left"><span class="emoji">👦</span>I’m 23 years old. Where are you living?<br>Ani umriin koo 23. Ati eessa jiraatta?</div>
+    <div class="bubble right"><span class="emoji">👧</span>I’m living in America. What about you?<br>Ani America jiraadha. ati hoo?</div>
+    <div class="bubble left"><span class="emoji">👦</span>I live in Canada. Bye, see you soon!<br>Ani Canada jiraadha. nagaatti, dhi'ootti wal argina!</div>
+    <div class="bubble right"><span class="emoji">👧</span>Ok, see you soon.<br>Tole, wal argina.</div>
+  </div>
+
+
+<footer id="footer" style="background:#333; padding:15px; text-align:center; position:fixed; bottom:0; left:0; width:100%; box-sizing:border-box; z-index:1000;">
+  <div id="footer-links" style="display:flex; flex-wrap:wrap; justify-content:center;">
+    <a href="index.html" 
+       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
+       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
+       onmouseout="this.style.color='white'; this.style.fontSize='16px';">Home</a>
+
+    <a href="jobapp.html" 
+       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
+       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
+       onmouseout="this.style.color='white'; this.style.fontSize='16px';">job application email</a>
+
+    <a href="About.html" 
+       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
+       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
+       onmouseout="this.style.color='white'; this.style.fontSize='16px';">About</a>
+
+    <a href="contact.html" 
+       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
+       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
+       onmouseout="this.style.color='white'; this.style.fontSize='16px';">Contact</a>
+
+    
+  </div>
+</footer>
+
+<script>
+  function adjustFooterLinks() {
+    const links = document.querySelectorAll('#footer-links a');
+    if(window.innerWidth < 500){
+      links.forEach(link => link.style.fontSize = '14px');
+    } else {
+      links.forEach(link => link.style.fontSize = '16px');
+    }
+  }
+  window.addEventListener('resize', adjustFooterLinks);
+  window.addEventListener('load', adjustFooterLinks);
+</script>
+
+
+
+</body>
+</html>

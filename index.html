@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+   
+</head>
+<body>
+    
+    <section class="header">
+      <nav>
+        <a href="index.html"> <img src="bori.jpg"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                
+                  <li><a href="About.html">ABOUT</a></li>
+                   <li><a href="contact.html">CONTACT</a></li>
+                   
+            </ul>
+
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" ></i>
+      </nav>
+      <div class="text-box">
+        <h1>Baga Nagaan Dhuftan <br>Welcome</h1>
+        <p></p>
+       
+      </div>
+
+<footer id="footer" style="background:#333; padding:15px; text-align:center; position:fixed; bottom:0; left:0; width:100%; box-sizing:border-box; z-index:1000;">
+  <div id="footer-links" style="display:flex; flex-wrap:wrap; justify-content:center;">
+    <a href="convers.html" 
+       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
+       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
+       onmouseout="this.style.color='white'; this.style.fontSize='16px';">Conversation</a>
+
+    <a href="jobapp.html" 
+       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
+       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
+       onmouseout="this.style.color='white'; this.style.fontSize='16px';">job application email</a>
+
+    <a href="About.html" 
+       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
+       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
+       onmouseout="this.style.color='white'; this.style.fontSize='16px';">About</a>
+
+    <a href="contact.html" 
+       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
+       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
+       onmouseout="this.style.color='white'; this.style.fontSize='16px';">Contact</a>
+
+    
+  </div>
+</footer>
+
+<script>
+  // Adjust font size for smaller screens
+  function adjustFooterLinks() {
+    const links = document.querySelectorAll('#footer-links a');
+    if(window.innerWidth < 500){
+      links.forEach(link => link.style.fontSize = '14px');
+    } else {
+      links.forEach(link => link.style.fontSize = '16px');
+    }
+  }
+  window.addEventListener('resize', adjustFooterLinks);
+  window.addEventListener('load', adjustFooterLinks);
+</script>
+
+
+
+
+</section>
+<SCript>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+       navLinks.style.right = "0px" ;
+    }
+    function hideMenu() {
+       navLinks.style.right = "-200px" ;
+    }
+</SCript>
+</html>
