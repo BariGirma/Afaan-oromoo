@@ -27,6 +27,21 @@
     p {
       margin-bottom: 15px;
     }
+    /* Make room for the fixed footer on desktops */
+body {
+  padding-bottom: 100px; 
+}
+
+/* On small devices, let the footer flow instead of being fixed */
+@media (max-width: 768px) {
+  #footer {
+    position: relative;
+  }
+  body {
+    padding-bottom: 20px; /* reset since footer isn’t fixed anymore */
+  }
+}
+
    
     .signature {
       margin-top: 25px;
@@ -119,6 +134,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
