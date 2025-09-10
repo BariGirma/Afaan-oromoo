@@ -26,6 +26,11 @@
     p {
       margin-bottom: 15px;
     }
+    @media (max-width: 600px) {
+  #footer {
+    position: relative; /* 👈 footer will move below content on phones */
+  }
+}
     .signature {
       margin-top: 25px;
       font-weight: bold;
@@ -71,7 +76,7 @@
        
        
        
-       <footer id="footer" style="background:#333; padding:15px; text-align:center; position:relative; bottom:0; left:0; width:100%; box-sizing:border-box; z-index:1000;">
+       <footer id="footer" style="background:#333; padding:15px; text-align:center; position:fixed; bottom:0; left:0; width:100%; box-sizing:border-box; z-index:1000;">
   <div id="footer-links" style="display:flex; flex-wrap:wrap; justify-content:center;">
     <a href="convers.html" 
        style="color:white; text-decoration:none; margin:50px 15px; font-weight:bold; transition:all 0.3s;"
@@ -98,6 +103,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
