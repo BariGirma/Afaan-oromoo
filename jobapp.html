@@ -32,11 +32,19 @@
       margin-top: 25px;
       font-weight: bold;
     }
-   @media (max-width: 600px) {
+  body {
+  padding-bottom: 80px; /* default spacing for fixed footer */
+}
+
+@media (max-width: 600px) {
   #footer {
-    position: relative; /* 👈 footer will move below content on phones */
+    position: relative;
+  }
+  body {
+    padding-bottom: 20px; /* reset padding when footer is not fixed */
   }
 }
+
 
     a {
       color: #3498db;
@@ -106,6 +114,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
