@@ -59,7 +59,7 @@
     #footer a {
       color: white;
       text-decoration: none;
-      margin: 10px 15px;
+      margin: 10px 15px; /* ✅ unified margin */
       font-weight: bold;
       transition: all 0.3s;
     }
@@ -84,17 +84,16 @@
       text-decoration: none;
       font-weight: bold;
       background: tomato;
-      padding: 15px;
-      margin: 40px 20px; /* reduced margin so it won't overlap */
-      display: inline-block;
+      padding: 15px 25px;
+      margin: 30px auto; /* centered with auto margins */
+      display: block; /* block + auto margin centers it */
+      width: fit-content;
+      border-radius: 6px;
       transition: 0.3s;
     }
     .translated-btn:hover {
       color: yellow;
-      font-size: 20px;
-    }
-    .translated-btn:not(:hover) {
-      font-size: 16px;
+      font-size: 18px;
     }
   </style>
 </head>
@@ -123,8 +122,10 @@
     </div>
   </div>
 
-  <b style="margin-left:20px;">Do You Want To See The Translated Email?</b>
-  <a href="jobafaan.html" class="translated-btn">See The Translated</a>
+  <div style="text-align:center; margin-top:20px;">
+    <b>Do You Want To See The Translated Email?</b><br>
+    <a href="jobafaan.html" class="translated-btn">See The Translated</a>
+  </div>
 
   <footer id="footer">
     <div id="footer-links" style="display:flex; flex-wrap:wrap; justify-content:center;">
