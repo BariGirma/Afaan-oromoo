@@ -9,57 +9,32 @@
       background-color: #f4f4f9;
       color: #333;
       line-height: 1.6;
-      padding-bottom: 120px;
-     
+      padding-bottom: 80px; /* leave space for fixed footer */
+      margin: 0;
     }
+
     .email-container {
       max-width: 650px;
-      margin: 0 auto;
+      margin: 20px auto;
       background-color: #ffffff;
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #2c3e50;
       margin-bottom: 20px;
     }
+
     p {
       margin-bottom: 15px;
     }
-    /* Make room for the fixed footer on desktops */
-body {
-  padding-bottom: 100px; 
-}
 
-/* On small devices, let the footer flow instead of being fixed */
-@media (max-width: 768px) {
-  #footer {
-    position: relative;
-  }
-  body {
-    padding-bottom: 20px; /* reset since footer isn’t fixed anymore */
-  }
-}
-
-   
     .signature {
       margin-top: 25px;
       font-weight: bold;
     }
-  body {
-  padding-bottom: 80px; /* default spacing for fixed footer */
-}
-
-@media (max-width: 600px) {
-  #footer {
-    position: relative;
-  }
-  body {
-    padding-bottom: 20px; /* reset padding when footer is not fixed */
-  }
-}
-
 
     a {
       color: #3498db;
@@ -67,6 +42,59 @@ body {
     }
     a:hover {
       text-decoration: underline;
+    }
+
+    /* Footer styles */
+    #footer {
+      background: #333;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      z-index: 1000;
+    }
+    #footer a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    #footer a:hover {
+      color: yellow;
+      font-size: 20px;
+    }
+
+    /* On small devices, let the footer flow */
+    @media (max-width: 600px) {
+      #footer {
+        position: relative;
+      }
+      body {
+        padding-bottom: 20px; /* reset since footer is not fixed */
+      }
+    }
+
+    /* Style for translated button */
+    .translated-btn {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: tomato;
+      padding: 15px;
+      margin: 40px 20px; /* reduced margin so it won't overlap */
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .translated-btn:hover {
+      color: yellow;
+      font-size: 20px;
+    }
+    .translated-btn:not(:hover) {
+      font-size: 16px;
     }
   </style>
 </head>
@@ -94,56 +122,17 @@ body {
       Ambo, Oromia</p>
     </div>
   </div>
-  <B>Do You Want To See The Translated Email? </B>
-  <a href="jobafaan.html" 
-   style="color:white; text-decoration:none; font-weight:bold; background: tomato;
-          padding: 15px; margin:50px 20px 120px 20px; /* 👈 bottom margin added */
-          display:inline-block;
-          transition:0.3s;"
-   onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
-   onmouseout="this.style.color='white'; this.style.fontSize='16px';">
-   See The Translated
-</a>
 
-       
-       
-       <footer id="footer" style="background:#333; padding:15px; text-align:center; position:fixed; bottom:0; left:0; width:100%; box-sizing:border-box; z-index:1000;">
-  <div id="footer-links" style="display:flex; flex-wrap:wrap; justify-content:center;">
-    <a href="convers.html" 
-       style="color:white; text-decoration:none; margin:50px 15px; font-weight:bold; transition:all 0.3s;"
-       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
-       onmouseout="this.style.color='white'; this.style.fontSize='16px';">Conversation</a>
+  <b style="margin-left:20px;">Do You Want To See The Translated Email?</b>
+  <a href="jobafaan.html" class="translated-btn">See The Translated</a>
 
-    <a href="jobapp.html" 
-       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
-       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
-       onmouseout="this.style.color='white'; this.style.fontSize='16px';">job application email</a>
-
-    <a href="About.html" 
-       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
-       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
-       onmouseout="this.style.color='white'; this.style.fontSize='16px';">About</a>
-
-    <a href="contact.html" 
-       style="color:white; text-decoration:none; margin:5px 15px; font-weight:bold; transition:all 0.3s;"
-       onmouseover="this.style.color='yellow'; this.style.fontSize='20px';" 
-       onmouseout="this.style.color='white'; this.style.fontSize='16px';">Contact</a>
-
-    
-  </div>
-</footer>
+  <footer id="footer">
+    <div id="footer-links" style="display:flex; flex-wrap:wrap; justify-content:center;">
+      <a href="convers.html">Conversation</a>
+      <a href="jobapp.html">Job Application Email</a>
+      <a href="About.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
